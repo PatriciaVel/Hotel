@@ -49,6 +49,12 @@ public class ServicioMessage {
                 if (message.getMessageText() != null) {
                     optMessage.get().setMessageText(message.getMessageText());
                 }
+                if (message.getClient() != null) {
+                    optMessage.get().setClient(message.getClient());
+                }
+                if (message.getRoom()!= null) {
+                    optMessage.get().setRoom(message.getRoom());
+                }
                 metodosCrud.save(optMessage.get());
                 return optMessage.get();
             } else {
